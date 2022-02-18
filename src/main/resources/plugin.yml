@@ -1,0 +1,4 @@
+name: ConfirmWhirlwind
+version: '${version}'
+main: com.github.sigureruri.confirmwhirlwind.ConfirmWhirlwind
+authors: [ SigureRuri ]
