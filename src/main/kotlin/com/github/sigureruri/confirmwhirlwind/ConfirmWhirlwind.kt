@@ -44,9 +44,11 @@ class ConfirmWhirlwind : JavaPlugin(), Listener {
 
             logger.info("${player.name} tried to issue command: $executedCommand")
 
-            player.sendMessage("${ChatColor.DARK_RED}！！  ${ChatColor.RED}${ChatColor.BOLD}確認  ${ChatColor.DARK_RED}！！")
-            player.sendMessage(" ${ChatColor.RED}間違い防止の為、もう一度")
-            player.sendMessage(" ${ChatColor.WHITE}[${executedCommand}]${ChatColor.RED}を実行してください。")
+            listOf(
+                "${ChatColor.DARK_RED}！！  ${ChatColor.RED}${ChatColor.BOLD}確認  ${ChatColor.DARK_RED}！！",
+                " ${ChatColor.RED}間違い防止の為、もう一度",
+                " ${ChatColor.WHITE}[${executedCommand}]${ChatColor.RED}を実行してください。"
+            ).forEach { context.sender.sendMessage(it) }
         }
     }
 
